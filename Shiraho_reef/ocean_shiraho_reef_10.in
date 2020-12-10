@@ -107,7 +107,7 @@
 ! indices (Istr,Iend) and (Jstr,Jend), [1:Ngrids].
 
       NtileI == 1   !1   !2   !6                            ! I-direction partition
-      NtileJ == 10   !3   !10  !20                            ! J-direction partition
+      NtileJ == 6   !3   !10  !20                            ! J-direction partition
 
 ! Set lateral boundary conditions keyword. Notice that a value is expected
 ! for each boundary segment per nested grid for each state variable.
@@ -231,12 +231,12 @@ ad_VolCons(north) ==  F                            ! northern boundary
         NRST == 10000
         NSTA == 1
         NFLT == 1
-       NINFO == 12
+       NINFO == 1
 
 ! Output history, average, diagnostic files parameters.
 
      LDEFOUT == T
-        NHIS == 1 !120
+        NHIS == 120
      NDEFHIS == 0
         NQCK == 0
      NDEFQCK == 0
@@ -1030,7 +1030,7 @@ Dout(iTvdif) == F F     ! temp_vdiff, ...    vertical diffusion
      APARNAM =  s4dvar.in
      SPOSNAM =  stations.in
      FPOSNAM =  floats_shiraho_reef.in         !!! used
-     BPARNAM =  bio_reef_ecosys_10.in             !!! used
+     BPARNAM =  bio_reef_ecosys.in             !!! used
      SPARNAM =  sediment_shiraho_reef_2.in       !!! used
      USRNAME =  MyFile.dat
 
